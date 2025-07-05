@@ -1,5 +1,5 @@
 async function updateServerStatus() {
-  const serverIP = "minestax.uz";
+  const serverIP = "138.201.48.55:25777";
 
   try {
     const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
