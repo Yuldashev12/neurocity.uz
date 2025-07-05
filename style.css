@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  background: url('background.jpg');
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* TANA TUZILMASI */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #facc15; /* sariq chegara */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #facc15; /* sariq rang */
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+header h1 span {
+  color: #fff;
+}
+
+/* NAVIGATSIYA */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #facc15; /* sariq hover effekti */
+}
+
+/* KONTENT BLOKI */
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.medium {
+  background-color: rgba(0, 0, 0, 0.7); /* yarim shaffof qora */
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+
+.details h2 {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #facc15;
+  padding-bottom: 10px;
+}
+
+.details h3 {
+  font-size: 1.3rem;
+  color: #ffed4a;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.details p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#players-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+#players-list li {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  color: #a3e635;
+  font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 2px solid #facc15;
+}
+
+/* RANKLAR PAGE */
+.ranklar {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.rank-container {
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.rank-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.tab-buttons button {
+  background-color: #1f2937;
+  color: #fff;
+  border: 2px solid #facc15;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.tab-buttons button:hover,
+.tab-buttons button.active {
+  background-color: #facc15;
+  color: #000;
+}
+
+/* Rank items */
+.center-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.rank-item {
+  text-align: center;
+}
+
+.rank-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.rank-item span {
+  display: block;
+  font-weight: 600;
+  color: #facc15;
+}
+
+/* Sotib olish tugmasi */
+.buy-button {
+  display: inline-block;
+  background-color: #facc15;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #eab308;
+}
+
+/* Tab content visibility */
+.rank-section {
+  display: none;
+}
+
+.rank-section.active {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .center-menu {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .rank-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* AKSIYA SAHIFASI */
+.aksiya {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.aksiya-container {
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.aksiya-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #facc15;
+}
+
+.aksiya-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.aksiya-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.aksiya-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+}
+
+.aksiya-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.aksiya-card h3 {
+  color: #facc15;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.aksiya-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* REJIMLAR SAHIFASI */
+.rejim-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.rejim-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #facc15;
+}
+
+.rejim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rejim-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.rejim-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(250, 204, 21, 0.3);
+}
+
+.rejim-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.rejim-card h3 {
+  color: #facc15;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.rejim-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* WEB TARMOQLAR SAHIFASI */
+.container1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.details1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.details1 h2 {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #facc15;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.details1 ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details1 li {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details1 li a {
+  color: #ff006a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details li a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEUROCITY.UZ - RANKLAR</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>NEURO<span>CITY</span>.UZ</h1>
+    <nav>
+      <a href="index.html">BOSH MENU</a>
+      <a href="rejimlar.html">REJIMLAR</a>
+      <a href="narxlar.html" class="active">RANKLAR</a>
+      <a href="aksiya.html">AKSIYA</a>
+      <a href="qoidalar.html">SERVER QOIDALARI</a>
+      <a href="tarmoqlar.html">WEB TARMOGLAR</a>
+    </nav>
+  </header>
+
+  <section class="ranklar">
+    <div class="rank-container">
+      <h2>REJIMNI TANLANG:</h2>
+
+      <!-- TAB BUTTONS -->
+      <div class="tab-buttons">
+        <button class="active" onclick="showTab('anarxiya', this)">ANARXIYA</button>
+        <button onclick="showTab('boxpvp', this)">BOXPVP</button>
+        <button onclick="showTab('lifesteal smp', this)">LIFESTEAL SMP</button>
+      </div>
+
+      <!-- ANARXIYA -->
+      <div id="anarxiya" class="rank-section active">
+        <div class="center-menu">
+          <div class="rank-item vip"><img src="img/vip.png" alt="VIP"><span>VIP</span></div>
+          <div class="rank-item pro"><img src="img/pro.png" alt="PRO"><span>PRO</span></div>
+          <div class="rank-item elite"><img src="img/elite.png" alt="ELITE"><span>ELITE</span></div>
+          <div class="rank-item general"><img src="img/general.png" alt="GENERAL"><span>GENERAL</span></div>
+          <div class="rank-item legenda"><img src="img/legenda.png" alt="LEGENDA"><span>LEGENDA</span></div>
+          <div class="rank-item luck"><img src="img/luck.png" alt="LUCK"><span>LUCK</span></div>
+          <div class="rank-item luckplus"><img src="img/luck+.png" alt="LUCK+"><span>LUCK+</span></div>
+          <div class="rank-item titan"><img src="img/titan.png" alt="TITAN"><span>TITAN</span></div>
+          <div class="rank-item ultra"><img src="img/ultra.png" alt="ULTRA"><span>ULTRA</span></div>
+          <div class="rank-item neuro"><img src="img/neuro.png" alt="NEURO+"><span>NEURO+</span></div>
+          <div class="rank-item token"><img src="img/token.png" alt="TOKEN"><span>TOKEN CASE</span></div>
+          <div class="rank-item donate"><img src="img/donate.png" alt="DONATE"><span>DONATE CASE</span></div>
+        </div>
+        <div style="text-align: center;">
+          <a href="https://t.me/iosmember" class="buy-button">SOTIB OLISH</a>
+        </div>
+      </div>
+
+      <!-- BOXPVP -->
+      <div id="boxpvp" class="rank-section">
+        <div class="center-menu">
+          <div class="rank-item vip"><img src="img/bvip.png" alt="VIP"><span>VIP</span></div>
+          <div class="rank-item mvp"><img src="img/bmvp.png" alt="MVP"><span>MVP</span></div>
+          <div class="rank-item pro"><img src="img/bpro.png" alt="PRO"><span>PRO</span></div>
+          <div class="rank-item elite"><img src="img/belite.png" alt="ELITE"><span>ELITE</span></div>
+          <div class="rank-item immortal"><img src="img/bimmortal.png" alt="IMMORTAL"><span>IMMORTAL</span></div>
+        </div>
+        <div style="text-align: center;">
+          <a href="https://t.me/iosmember" class="buy-button">SOTIB OLISH</a>
+        </div>
+      </div>
+
+      <!-- LIFESTEAL SMP -->
+      <div id="lifesteal smp" class="rank-section">
+        <div class="center-menu">
+          <div class="rank-item"><img src="img/life1.png" alt="LIFE RANK"><span>FARMER+</span></div>
+          <div class="rank-item"><img src="img/life2.png" alt="LIFE RANK"><span>KING SMP</span></div>
+        </div>
+        <div style="text-align: center;">
+          <a href="https://t.me/iosmember" class="buy-button">SOTIB OLISH</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>NeuroCity serveri hech qanday tarzda Mojang, AB bilan bog'liq emas.</p>
+    <p>© 2025 NeuroCity - Barcha huquqlar himoyalangan</p>
+  </footer>
+
+  <script>
+    function showTab(tabId, element) {
+      const tabs = document.querySelectorAll('.rank-section');
+      const buttons = document.querySelectorAll('.tab-buttons button');
+
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
