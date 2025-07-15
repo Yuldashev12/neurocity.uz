@@ -1,7 +1,7 @@
 // status.js
 
 // Bu yerga o'zingizning server IP yoki domen nomingizni yozing
-const serverIP = "neurocity.game4free.net";
+const serverIP = "neurocity.uz:25777";
 
 const statusSpan       = document.getElementById("status");
 const onlineCountSpan  = document.getElementById("online-count");
